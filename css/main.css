@@ -23,29 +23,35 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
 }
 
-.primary-button {
+.button {
   padding: 8px 8px;
   border-width: 2px;
   border-style: outset;
-  border-color: var(--primary-color);
   text-align: center;
-  color: var(--primary-color);
   cursor: pointer;
 }
 
-.primary-button:hover {
+.button:hover {
   border-style: inset;
+}
+
+.button.is-primary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.button.is-primary:hover {
   background-color: var(--primary-color);
   color: var(--text-color);
 }
 
-.is-active {
+.button.is-active {
   border-style: inset;
   text-decoration: underline;
   font-weight: bold;
 }
 
-.is-active:hover {
+.button.is-active:hover {
   border-style: outset;
 }
 
