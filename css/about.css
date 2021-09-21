@@ -1,0 +1,31 @@
+@import "main.css";
+
+.main {
+  display: grid;
+  place-items: center;
+  font-family: Monospace;
+}
+
+.logo-art {
+  white-space: pre;
+  font-weight: bolder;
+  font-size: 0.7em;
+  color: var(--primary-color);
+}
+
+.about-version {
+  text-align: center;
+}
+
+.about-description {
+  text-align: center;
+}
+
+.about-content {
+  text-align: left;
+}
+
+.about-team {
+  text-align: center;
+  font-size: 0.9em;
+}

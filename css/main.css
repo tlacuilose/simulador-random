@@ -1,0 +1,66 @@
+:root {
+  --dark-color: #171717;
+  --primary-color: #DA0037;
+  --secondary-color: #444444;
+  --text-color: #EDEDED;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 16px 0;
+  display: grid;
+  place-items: center;
+}
+
+.navigation-buttons {
+  width: 80vw;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+
+.primary-button {
+  padding: 8px 8px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: var(--primary-color);
+  text-align: center;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  border-style: inset;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.is-active {
+  border-style: inset;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.is-active:hover {
+  border-style: outset;
+}
+
+.app-container {
+  background-color: var(--secondary-color);
+  font-family: Monospace;
+  font-size: 14px;
+  color: var(--text-color);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  padding: 16px 0;
+  text-align: center;
+}

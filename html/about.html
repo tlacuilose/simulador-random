@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>SemRand</title>
+    <link rel="stylesheet" href="../css/about.css">
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <div class="navigation-buttons">
+          <a class="primary-button is-active">About</a>
+          <a class="primary-button">MC</a>
+          <a class="primary-button">MCC</a>
+          <a class="primary-button">MCM</a>
+          <a class="primary-button">GM</a>
+          <a class="primary-button">MCLC</a>
+        </div>
+      </header>
+      <div class="main">
+        <div class="about">
+          <h1 class="logo-art">
+      ___           ___           ___           ___           ___           ___           ___
+     /\  \         /\  \         /\__\         /\  \         /\  \         /\__\         /\  \
+    /::\  \       /::\  \       /::|  |       /::\  \       /::\  \       /::|  |       /::\  \
+   /:/\ \  \     /:/\:\  \     /:|:|  |      /:/\:\  \     /:/\:\  \     /:|:|  |      /:/\:\  \
+  _\:\~\ \  \   /::\~\:\  \   /:/|:|__|__   /::\~\:\  \   /::\~\:\  \   /:/|:|  |__   /:/  \:\__\
+ /\ \:\ \ \__\ /:/\:\ \:\__\ /:/ |::::\__\ /:/\:\ \:\__\ /:/\:\ \:\__\ /:/ |:| /\__\ /:/__/ \:|__|
+ \:\ \:\ \/__/ \:\~\:\ \/__/ \/__/~~/:/  / \/_|::\/:/  / \/__\:\/:/  / \/__|:|/:/  / \:\  \ /:/  /
+  \:\ \:\__\    \:\ \:\__\         /:/  /     |:|::/  /       \::/  /      |:/:/  /   \:\  /:/  /
+   \:\/:/  /     \:\ \/__/        /:/  /      |:|\/__/        /:/  /       |::/  /     \:\/:/  /
+    \::/  /       \:\__\         /:/  /       |:|  |         /:/  /        /:/  /       \::/__/
+     \/__/         \/__/         \/__/         \|__|         \/__/         \/__/         ~~
+          </h1>
+          <p class="about-version">version 1.0.0</p>
+          <p class="about-description">
+          SemRand es un simulador de n&uacute;meros random.<br>
+          Cuenta con los siguientes generadores:<br>
+          </p>
+          <ul>
+            <li>MCC: Método de los Centros Cuadrados</li>
+            <li>MC: Método Congruencial</li>
+            <li>MCM: Método Congruencial Mixto con validación Teorema de HULL-DOBELL</li>
+            <li>GM: Generador Multiplicativo</li>
+            <li>MCLC: Método Congruencial lineal Combinado</li>
+          </ul>
+          <p class="about-description">
+          Para los casos MC, MCM y GM se puede validar la aceptaci&oacute;n con<br>
+          las pruebas de Chi-Cuadrada y Kolmogorov-Smirnov.
+          </p>
+          <p class="about-team">
+          INTEGRANTES:<br>
+          Carlos De la Garza Macías - A01024712<br>
+          Eduardo Harari Haber - A01025876<br>
+          Rubén Sánchez Rodríguez - A01021759<br>
+          José Javier Tlacuilo Fuentes - A01420128<br>
+          Alonso Sebastián Varela Sandoval - A01335705<br>
+          </p>
+        </div>
+      </div>
+      <footer>TC2007 | Métodos Cuantitativos y Simulación | Proyecto 1 | Equipo #3</footer>
+    </div>
+    <script src="../js/renderer.js"></script>
+  </body>
+</html>
