@@ -1,1 +1,85 @@
 @import "main.css";
+
+.main {
+  display: grid;
+  place-items: center;
+}
+
+.content-container {
+  display: grid;
+  grid-template-rows: 60vh 1fr;
+  grid-gap: 1rem;
+  height: 100%;
+  width: 80vw;
+}
+
+.generator-content {
+  display: grid;
+  grid-template-columns: minmax(250px, 25%) 1fr;
+  grid-gap: 1rem;
+}
+
+.section-name {
+  margin: 4px 8px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.input-form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 0.5rem;
+  margin: 4px 8px;
+}
+
+.input-form .is-field {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 0.5rem;
+}
+
+.input-form .is-field input { 
+  height: 25px;
+}
+
+.input-form .is-button {
+  display: grid;
+  place-items: center;
+}
+
+#table-content {
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  height: 60vh;
+}
+
+.table-container {
+  padding: 0 16px;
+  padding-bottom: 8px;
+  overflow-y: auto;
+}
+
+.table-container.is-header {
+  padding-top: 8px;
+  padding-bottom: 0;
+}
+
+.table-container.is-header table {
+  border-collapse: separate;
+  border: 1px solid var(--text-color);
+}
+
+.table-container table {
+  table-layout: fixed;
+  width: 100%;
+  border: 1px solid var(--text-color);
+  border-collapse: collapse;
+}
+
+.table-container th,
+.table-container td {
+  word-wrap: break-word;
+  border: 1px solid var(--text-color);
+  text-align: center;
+}
