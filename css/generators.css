@@ -7,7 +7,7 @@
 
 .content-container {
   display: grid;
-  grid-template-rows: 60vh 1fr;
+  grid-template-rows: 60vh 20vh;
   grid-gap: 1rem;
   height: 100%;
   width: 80vw;
@@ -17,6 +17,12 @@
   display: grid;
   grid-template-columns: minmax(250px, 25%) 1fr;
   grid-gap: 1rem;
+}
+
+.section {
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--primary-color);
 }
 
 .section-name {
@@ -30,7 +36,7 @@
   display: grid;
   grid-template-rows: auto;
   grid-gap: 0.5rem;
-  margin: 4px 8px;
+  margin: 8px 8px;
 }
 
 .input-form .is-field {
@@ -55,14 +61,14 @@
 }
 
 .table-container {
-  padding: 0 16px;
-  padding-bottom: 8px;
+  margin: 0 16px;
+  margin-bottom: 8px;
   overflow-y: auto;
 }
 
 .table-container.is-header {
-  padding-top: 8px;
-  padding-bottom: 0;
+  margin-top: 8px;
+  margin-bottom: 0;
 }
 
 .table-container.is-header table {
@@ -82,4 +88,43 @@
   word-wrap: break-word;
   border: 1px solid var(--text-color);
   text-align: center;
+}
+
+#actions-content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 20vh;
+}
+
+.actions-container {
+  display: grid;
+  grid-template-columns: minmax(250px, 25%) 1fr;
+  grid-gap: 1rem;
+}
+
+.actions-buttons {
+  display: grid;
+  place-items: center;
+  padding-bottom: 8px;
+}
+
+.actions-buttons .button {
+  text-decoration: none;
+}
+
+.actions-results {
+  display: grid;
+  padding: 8px 16px;
+  padding-top: 0;
+}
+
+.actions-results div {
+  border: 1px solid;
+}
+
+.actions-results p {
+  overflow-y: auto;
+  height: 10vh;
+  padding-right: 4px;
+  margin-right: 4px;
 }
