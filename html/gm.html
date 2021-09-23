@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>SemRand - Generador Multiplicativo</title>
+    <link rel="stylesheet" href="../css/generators.css">
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <div class="navigation-buttons">
+          <a class="button is-primary" href="about.html">About</a>
+          <a class="button is-primary" href="mcc.html">MCC</a>
+          <a class="button is-primary" href="mc.html">MC</a>
+          <a class="button is-primary" href="mcm.html">MCM</a>
+          <a class="button is-primary is-active" href="gm.html">GM</a>
+          <a class="button is-primary" href="mclc.html">MCLC</a>
+        </div>
+      </header>
+      <div class="main">
+        <!-- Main content of the generator-->
+        <div class="content-container">
+          <div class="generator-content">
+            <div class="section" id="input-content">
+              <div class="section-name">C&aacute;lculo</div>
+              <h1 class="is-title">Método de los Centros Cuadrados</h1>
+              <p class="is-description">Descripcion con el metodo, explicacion, etc.</p>
+              <form class="input-form">
+                <div class="is-field">
+                  <label for="seed">Semilla Xo:</label>
+                  <input type="number" name="seed" id="seed-input" required>
+                </div>
+                <div class="is-field">
+                  <label for="interations">N&uacute;mero de iteraciones:</label>
+                  <input type="number" name="iterations" id="iterations-input" required>
+                </div>
+                <div class="is-button">
+                  <input type="submit" value="Generar" class="button is-primary">
+                </div>
+              </form>
+            </div>
+            <div class="section" id="table-content">
+              <h1 class="section-name">Resultados</h1>
+              <div class="table-container is-header">
+                <table>
+                  <tr>
+                    <th>Column</th>
+                    <th>Column</th>
+                    <th>Column</th>
+                    <th>Column</th>
+                    <th>Column</th>
+                  </tr>
+                </table>
+              </div>
+              <div class="table-container">
+                <table>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                  <tr>
+                    <th>Xn</th>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                    <td>Val</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="section" id="actions-content">
+              <h1 class="section-name">Acciones</h1>
+              <div class="actions-container">
+                <div class="actions-buttons">
+                  <button class="button is-primary">Prueba de Chi-cuadrada</button>
+                  <button class="button is-primary">Prueba de Kolmogorov-Smirnov</button>
+                  <button class="button is-primary">Validaci&oacuten Hull-Dobell</button>
+                </div>
+                <div class="actions-results">
+                  <div>
+                    <h1 class="is-subtitle">Titulo de la accion tomada</h1>
+                    <p class="is-description">
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                      Text of the result from the action taken.
+                    </p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <footer>TC2007 | Métodos Cuantitativos y Simulación | Proyecto 1 | Equipo #3</footer>
+    </div>
+    <script src="../js/renderer.js"></script>
+  </body>
+</html>
