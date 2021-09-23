@@ -13,7 +13,7 @@ function createWindow () {
   })
 
   // and load the entry html of the app.
-  mainWindow.loadFile('html/about.html')
+  mainWindow.loadFile('views/about.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
