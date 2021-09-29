@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "SemRand",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "SemRand es un simulador de numeros random.",
   "main": "app/main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/tlacuilose/simulador-random",
   "keywords": [
     "Electron",
     "quick",
@@ -14,7 +14,7 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "Equipo#3 TC2007 Jose Tlacuilo",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^14.0.0"
