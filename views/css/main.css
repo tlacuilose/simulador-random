@@ -107,7 +107,6 @@ footer {
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 3px;
     border-width: 1px;
     border-style: outset;
     border-color: var(--primary-color);
