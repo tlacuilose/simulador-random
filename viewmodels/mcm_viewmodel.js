@@ -1,6 +1,5 @@
-import mcm from '../models/mcm.js';
+let mcm = new window.Mcm();
 
-let mcm = mcm();
 const inputForm = document.querySelector('#form-inputs');
 
 inputForm.addEventListener('submit', (event) => {

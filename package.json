@@ -5,7 +5,8 @@
   "main": "app/main.js",
   "scripts": {
     "start": "electron .",
-    "test": "jest"
+    "test": "jest",
+    "generate-docs": "jsdoc -c ./docs/conf.json"
   },
   "repository": "https://github.com/tlacuilose/simulador-random",
   "keywords": [
@@ -19,6 +20,7 @@
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^14.0.0",
-    "jest": "^27.2.4"
+    "jest": "^27.2.4",
+    "jsdoc": "^3.6.7"
   }
 }
