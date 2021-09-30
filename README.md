@@ -1,16 +1,15 @@
 # Simulador Random
+SemRand es un simulador de números random.
+Cuenta con los siguientes generadores:
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+- MCC: Método de los Centros Cuadrados
+- C: Método Congruencial
+- CM: Método Congruencial Mixto con validación Teorema de HULL-DOBELL
+- M: Generador Multiplicativo
+- CLC: Método Congruencial lineal Combinado
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
-
-A basic Electron application needs just these files:
-
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
-
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
+*Para los casos MC, MCM y GM se puede validar la aceptación con
+las pruebas de Chi-Cuadrada y Kolmogorov-Smirnov.*
 
 ## To Use
 
@@ -26,8 +25,17 @@ npm start
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
 ## About MVVM
+- [The Model-View-ViewModel Pattern](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/enterprise-application-patterns/mvvm) - Microsoft
 
-- [The Model-View-ViewModel Pattern](The Model-View-ViewModel Pattern) - Microsoft
+## Object oriented in Javascript
+- [Mozilla Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes) - classes in javascript
+
+## Unit testing using Jest
+- [Jest documentation](https://jestjs.io/docs/getting-started) - getting started, run npm test
+- [Jest documentation](https://jestjs.io/docs/expect) - expect, most common test evaluator
+
+## Writing documentation with JSDoc
+- [JSDoc usage](https://jsdoc.app/about-getting-started.html) - getting started, run jsdoc script.js
 
 ## Resources for Learning Electron
 

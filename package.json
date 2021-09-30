@@ -4,7 +4,9 @@
   "description": "SemRand es un simulador de numeros random.",
   "main": "app/main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "test": "jest",
+    "generate-docs": "jsdoc -c ./docs/conf.json"
   },
   "repository": "https://github.com/tlacuilose/simulador-random",
   "keywords": [
@@ -17,6 +19,8 @@
   "author": "Equipo#3 TC2007 Jose Tlacuilo",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^14.0.0"
+    "electron": "^14.0.0",
+    "jest": "^27.2.4",
+    "jsdoc": "^3.6.7"
   }
 }
