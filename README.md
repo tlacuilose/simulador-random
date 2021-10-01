@@ -38,6 +38,10 @@ npm test
 - [Chai documentation](https://www.chaijs.com/) - documentation
 - [Chai documentation](https://www.chaijs.com/guide/styles/#expect) - expect, most common test evaluator
 
+### Integration tests using Spectron
+
+- [Spectron repository](https://github.com/electron-userland/spectron#usage) - usage
+
 ## About MVVM
 
 - [The Model-View-ViewModel Pattern](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/enterprise-application-patterns/mvvm) - Microsoft
