@@ -2,14 +2,14 @@
  * Result from a MCM generator.
  * @class ResultMCM
  * @type {Object}
- * @property {Array.<Number>} results The random numbers generated.
+ * @property {Array.<Number>} randoms The random numbers generated.
  * @property {String} error Error description or null if no errors found.
  * @param {Array.<Number>} randoms The random numbers generated.
  * @param {String} error Error description or null if no errors found.
  * */
 class ResultMCM {
-  constructor(results, error) {
-    this.randoms = results;
+  constructor(randoms, error) {
+    this.randoms = randoms;
     this.error = error;
   }
 }
@@ -18,11 +18,11 @@ class ResultMCM {
  * Metodo Congruencial Mixto Generator.
  * @class Mcm
  * @type {Object}
- * @property {Array.<Number>} results The random numbers generated.
+ * @property {Array.<Number>} randoms The random numbers generated.
  * */
 class Mcm {
   constructor() {
-    this.results = [];
+    this.randoms = [];
   }
 
   /**
@@ -39,14 +39,16 @@ class Mcm {
     if (m == 0) {
       return new ResultMCM([], "ZeroModuleError");
     }
+    // Clear saved randoms.
+    this.randoms = [];
 
     // Calculate mcm: Xi+1 = (aXi + c) mod m for i e N.
     let xn = x0;
     for (let j = 0; j < i; j++) {
       xn = (a * xn + c) % m
-      this.results.push(xn);
+      this.randoms.push(xn);
     }
-    return new ResultMCM(this.results, null);
+    return new ResultMCM(this.randoms, null);
   }
 }
 
