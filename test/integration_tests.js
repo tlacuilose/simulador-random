@@ -2,46 +2,60 @@ const Application = require('spectron').Application
 const assert = require('assert')
 const electronPath = require('electron') // Require Electron from the binaries included in node_modules.
 const path = require('path')
+const expect = require('chai').expect
 
-describe('Application launch', function () {
+describe('App Integration Tests', function () {
   this.timeout(10000)
 
-  beforeEach(function () {
+  describe('Create', function () {
+
+    openAndCloseApp();
+
+    it('shows an initial window', async function () {
+      const count = await this.app.client.getWindowCount();
+      expect(count).to.equal(1);
+    });
+
+    it('shows an initial window with app title', async function () {
+      const title = await this.app.client.getTitle();
+      expect(title).to.equal('SemRand');
+    });
+  });
+
+  describe('About view', function () {
+
+    openAndCloseApp();
+
+    it('shows a logo art', async function () {
+      const logoart = await this.app.client.$('.logo-art');
+      expect(logoart).to.exist;
+    });
+
+    it('shows about information', async function () {
+      const version = await this.app.client.$('.about-version');
+      expect(version).to.exist;
+      const description = await this.app.client.$('.about-description');
+      expect(description).to.exist;
+      const team = await this.app.client.$('.about-team');
+      expect(team).to.exist;
+    });
+  });
+
+});
+
+function openAndCloseApp() {
+
+  before(function () {
     this.app = new Application({
-      // Your electron path can be any binary
-      // i.e for OSX an example path could be '/Applications/MyApp.app/Contents/MacOS/MyApp'
-      // But for the sake of the example we fetch it from our node_modules.
       path: electronPath,
-
-      // Assuming you have the following directory structure
-
-      //  |__ my project
-      //     |__ ...
-      //     |__ main.js
-      //     |__ package.json
-      //     |__ index.html
-      //     |__ ...
-      //     |__ test
-      //        |__ spec.js  <- You are here! ~ Well you should be.
-
-      // The following line tells spectron to look and use the main.js file
-      // and the package.json located 1 level above.
       args: [path.join(__dirname, '..')]
     })
     return this.app.start()
   })
 
-  afterEach(function () {
+  after(function () {
     if (this.app && this.app.isRunning()) {
       return this.app.stop()
     }
   })
-
-  it('shows an initial window', function () {
-    return this.app.client.getWindowCount().then(function (count) {
-      assert.equal(count, 1)
-      // Please note that getWindowCount() will return 2 if `dev tools` are opened.
-      // assert.equal(count, 2)
-    })
-  })
-})
+}

@@ -1,5 +1,4 @@
-const chai = require('chai');
-const expect = chai.expect;
+const expect = require('chai').expect
 const Mcm = require('../../models/mcm.js');
 
 describe('MCM Model Unit Tests', () => {
