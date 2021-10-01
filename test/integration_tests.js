@@ -5,10 +5,10 @@ const path = require('path')
 const expect = require('chai').expect
 
 describe('App Integration Tests', function () {
-  this.timeout(10000)
 
   describe('Create', function () {
 
+    // this.timeout(5000), default is 2 secs
     openAndCloseApp();
 
     it('shows an initial window', async function () {
@@ -41,6 +41,34 @@ describe('App Integration Tests', function () {
     });
   });
 
+  describe('MCM View', function () {
+
+    openAndCloseApp();
+
+    it('navigates to mcm screen', async function () {
+      const mcmButton = await this.app.client.$('a.button[href="mcm.html"');
+      expect(mcmButton).to.exist;
+      await mcmButton.click();
+      const windowtitle = await this.app.client.getTitle();
+      expect(windowtitle).to.equal('SemRand - Congruencial Mixto');
+      const title = await this.app.client.$('.is-title');
+      const generatorTitle = await title.getText();
+      expect(generatorTitle).to.equal('Método Congruencial Mixto')
+    });
+
+    it('has inputs for x0, a, c, m, i', async function () {
+      const x0Input = await this.app.client.$('#form-inputs input[name="x0"]');
+      expect(x0Input).to.exist;
+      const aInput = await this.app.client.$('#form-inputs input[name="a"]');
+      expect(aInput).to.exist;
+      const cInput = await this.app.client.$('#form-inputs input[name="c"]');
+      expect(cInput).to.exist;
+      const mInput = await this.app.client.$('#form-inputs input[name="m"]');
+      expect(mInput).to.exist;
+      const iInput = await this.app.client.$('#form-inputs input[name="i"]');
+      expect(iInput).to.exist;
+    });
+  });
 });
 
 function openAndCloseApp() {

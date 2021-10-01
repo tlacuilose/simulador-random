@@ -25,16 +25,32 @@
           <div class="generator-content">
             <div class="section" id="input-content">
               <div class="section-name">C&aacute;lculo</div>
-              <h1 class="is-title">Método de los Centros Cuadrados</h1>
-              <p class="is-description">Descripcion con el metodo, explicacion, etc.</p>
+              <h1 class="is-title">Método Congruencial Mixto</h1>
+              <p class="is-description">
+              Formula:</br>
+              <strong>X(n+1)=(aX(n)+c)mod(m)</strong></br>
+              con validaci&oacute;n Hull-Dobell.
+              </p>
               <form class="input-form" id="form-inputs">
-                <div class="is-field">
-                  <label for="seed">Semilla Xo:</label>
-                  <input type="number" name="seed" id="seed-input" required>
+                <div class="is-field-inline">
+                  <label for="x0">Xo:</label>
+                  <input type="number" name="x0" id="x0-input" required>
                 </div>
-                <div class="is-field">
-                  <label for="interations">N&uacute;mero de iteraciones:</label>
-                  <input type="number" name="iterations" id="iterations-input" required>
+                <div class="is-field-inline">
+                  <label for="a">Xo:</label>
+                  <input type="number" name="a" id="a-input" required>
+                </div>
+                <div class="is-field-inline">
+                  <label for="c">Xo:</label>
+                  <input type="number" name="c" id="c-input" required>
+                </div>
+                <div class="is-field-inline">
+                  <label for="m">Xo:</label>
+                  <input type="number" name="m" id="m-input" required>
+                </div>
+                <div class="is-field-inline">
+                  <label for="i">Xo:</label>
+                  <input type="number" name="i" id="i-input" required>
                 </div>
                 <div class="is-button">
                   <input type="submit" value="Generar" class="button is-primary">
