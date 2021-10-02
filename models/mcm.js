@@ -7,11 +7,9 @@
  * @param {Array.<Number>} randoms The random numbers generated.
  * @param {String} error Error description or null if no errors found.
  * */
-class ResultMCM {
-  constructor(randoms, error) {
-    this.randoms = randoms;
-    this.error = error;
-  }
+function ResultMCM(randoms, error) {
+  this.randoms = randoms;
+  this.error = error;
 }
 
 /**
@@ -20,13 +18,12 @@ class ResultMCM {
  * @type {Object}
  * @property {Array.<Number>} randoms The random numbers generated.
  * */
-class Mcm {
-  constructor() {
-    this.randoms = [];
-  }
+function Mcm() {
+  this.randoms = [];
 
   /**
    * Generate random numbers for Metodo Congruencial Mixto..
+   * @memberof Mcm
    * @param {Number} x0 The seed.
    * @param {Number} a Multiplier.
    * @param {Number} c Increment.
@@ -34,7 +31,7 @@ class Mcm {
    * @param {Number} i Number of iterations.
    * @returns {ResultMCM} All the generated random in the iterations.
    * */
-  generate(x0, a, c, m, i) {
+  this.generate = function(x0, a, c, m, i) {
     // There cant be a mod 0.
     if (m == 0) {
       return new ResultMCM([], "ZeroModuleError");
