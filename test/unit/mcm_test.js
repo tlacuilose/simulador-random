@@ -9,8 +9,8 @@ describe('MCM Model Unit Tests', () => {
 
   describe('create', () => {
     let mcm = new Mcm();
-    it('should have empty randoms', () => {
-      expect(mcm.randoms).to.be.empty;
+    it('should create an instance', () => {
+      expect(mcm).to.exist;
     });
   });
 
@@ -64,19 +64,19 @@ describe('MCM Model Unit Tests', () => {
     it('should have empty randoms when no iterations have passed', () => {
       mcm.generate(0, 0, 0, 1, n0);
       mcm.generate(0, 0, 0, 1, 0);
-      expect(mcm.randoms).to.be.empty;
+      expect(mcm.getRandoms()).to.be.empty;
     });
 
     it('should have previous values when zero module is passed', () => {
       let firstResult = mcm.generate(0, 0, 0, 1, n0);
       mcm.generate(0, 0, 0, 0, n0);
-      expect(mcm.randoms).to.equal(firstResult.randoms);
+      expect(mcm.getRandoms()).to.equal(firstResult.randoms);
     });
 
     it('should have new number of randoms', () => {
       mcm.generate(0, 0, 0, 1, n0);
       mcm.generate(0, 0, 0, 1, n1);
-      expect(mcm.randoms).to.have.lengthOf(n1);
+      expect(mcm.getRandoms()).to.have.lengthOf(n1);
     });
   });
 

@@ -41,6 +41,7 @@ npm test
 ### Integration tests using Spectron
 
 - [Spectron repository](https://github.com/electron-userland/spectron#usage) - usage
+- [WebDriver IO Docs](https://webdriver.io/docs/api) - traveling through the html
 
 ## About MVVM
 
