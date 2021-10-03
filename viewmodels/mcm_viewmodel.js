@@ -25,10 +25,8 @@ inputForm.addEventListener('submit', (event) => {
   }
 
   let randoms = result.randoms;
-  console.log(randoms);
 
   let tbody = document.querySelector('.table-container tbody');
-  console.log(tbody);
   // Clear table body.
   tbody.innerHTML = '';
   for (let j = 0; j < randoms.length; j++) {
