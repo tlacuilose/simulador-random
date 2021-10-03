@@ -142,3 +142,8 @@
   padding-right: 4px;
   margin-right: 4px;
 }
+
+.is-error-msg {
+  margin: 0 8px;
+  color: var(--primary-color);
+}

@@ -70,9 +70,10 @@ describe('MCM View Tests', function () {
   describe('runs class example x0 = 4, a = 5, c = 7, m = 8, i = 5', function () {
 
     env.openAndCloseApp();
+    this.timeout(10000);
 
     let randomsColumn = 2; // Start on 0.
-    let expectedRandoms = ['3, 6, 5, 0, 7'];
+    let expectedRandoms = ["X1=3", "X2=6", "X3=5", "X4=0", "X5=7"];
     it('displays correct randoms in table', async function () {
       await visitMCM(this.app.client);
       await fillInputForm(this.app.client, 4, 5, 7, 8, 5);
@@ -84,8 +85,9 @@ describe('MCM View Tests', function () {
       let results = [];
       for (let i = 0; i < rows.length; i++) {
         const resultColumns = await rows[i].$$('td');
+        expect(resultColumns).to.exist;
         const random = await resultColumns[randomsColumn].getText();
-        result.push(random);
+        results.push(random);
       }
       expect(results).to.deep.equal(expectedRandoms);
     });
