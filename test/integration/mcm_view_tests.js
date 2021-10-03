@@ -24,6 +24,7 @@ describe('MCM View Tests', function () {
 
   describe('has mcm view', function () {
 
+    this.timeout(60000);
     env.openAndCloseApp();
 
     it('navigates to mcm screen', async function () {

@@ -6,6 +6,7 @@ describe('About View Tests', function () {
 
   describe('has about view as the first view', function () {
 
+    this.timeout(60000);
     env.openAndCloseApp();
 
     it('shows a logo art', async function () {
