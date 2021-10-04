@@ -25,16 +25,41 @@
           <div class="generator-content">
             <div class="section" id="input-content">
               <div class="section-name">C&aacute;lculo</div>
-              <h1 class="is-title">Método de los Centros Cuadrados</h1>
-              <p class="is-description">Descripcion con el metodo, explicacion, etc.</p>
+              <h1 class="is-title">Método Congruencial Lineal Combinado</h1>
+              <p class="is-description">Combinación de dos o más generadores congruentes multiplicativos.</p>
+              <p id='input-form-error' class='is-error-msg'></p>
               <form class="input-form" id="form-inputs">
                 <div class="is-field">
-                  <label for="seed">Semilla Xo:</label>
-                  <input type="number" name="seed" id="seed-input" required>
+                  <label for="seed1">Semilla X1:</label>
+                  <input type="number" name="seed1" id="seed1-input" required>
+                </div>
+                <div class="is-field">
+                  <label for="seed2">Semilla X2:</label>
+                  <input type="number" name="seed2" id="seed2-input" required>
+                </div>
+                <div class="is-field-inline">
+                  <label for="a1">a1:</label>
+                  <input type="number" name="a1" id="a1-input" required>
+                </div>
+                <div class="is-field-inline">
+                  <label for="a2">a2:</label>
+                  <input type="number" name="a2" id="a2-input" required>
+                </div>
+                <div class="is-field-inline">
+                  <label for="m1">m1:</label>
+                  <input type="number" name="m1" id="m1-input" required>
+                </div>
+                <div class="is-field-inline">
+                  <label for="m2">m2:</label>
+                  <input type="number" name="m2" id="m2-input" required>
+                </div>
+                <div class="is-field-inline">
+                  <label for="m">m:</label>
+                  <input type="number" name="m" id="m-input" required>
                 </div>
                 <div class="is-field">
                   <label for="interations">N&uacute;mero de iteraciones:</label>
-                  <input type="number" name="iterations" id="iterations-input" required>
+                  <input type="number" name="i" id="i-input" required>
                 </div>
                 <div class="is-button">
                   <input type="submit" value="Generar" class="button is-primary">
@@ -45,484 +70,31 @@
               <h1 class="section-name">Resultados</h1>
               <div class="table-container is-header">
                 <table>
-                  <tr>
-                    <th>Column</th>
-                    <th>Column</th>
-                    <th>Column</th>
-                    <th>Column</th>
-                    <th>Column</th>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th>Sem. X</th>
+                      <th>Sem. Y</th>
+                      <th>X1</th>
+                      <th>X2</th>
+                      <th>X</th>
+                      <th>Random Ri</th>
+                    </tr>
+                  </thead>
                 </table>
               </div>
               <div class="table-container">
                 <table>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
+                  <tbody>
+                  </tbody>
                 </table>
               </div>
             </div>
           </div>
-          <div class="section" id="tests-content">
-              <h1 class="section-name">Pruebas</h1>
-              <div class="tests-container">
-                <div class="tests-buttons">
-                  <form class="input-form" id="form-tests">
-                    <div class="is-field">
-                      <label>Alpha:</label>
-                      <div class="is-field-inline">
-                        <div class="is-field">
-                          <label for="ten-alpha">0.1</label>
-                          <input type="radio" id="ten-alpha" name="ten-alpha" value="0.1">
-                        </div>
-                        <div class="is-field">
-                          <label for="five-alpha">0.05</label>
-                          <input type="radio" id="five-alpha" name="five-alpha" value="0.05">
-                        </div>
-                        <div class="is-field">
-                          <label for="two-alpha">0.02</label>
-                          <input type="radio" id="two-alpha" name="two-alpha" value="0.025">
-                        </div>
-                        <div class="is-field">
-                          <label for="one-alpha">0.01</label>
-                          <input type="radio" id="one-alpha" name="one-alpha" value="0.01">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="is-field-inline">
-                      <input type="checkbox" name="chi-sq" id="chi-sq-input">
-                      <label for="chi-sq">Prueba de Chi-cuadrada</label>
-                    </div>
-                    <div class="is-field-inline">
-                      <input type="checkbox" name="kol-smi" id="kol-smi-input">
-                      <label for="kol-smi">Prueba de Kolmogorov-Smirnov</label>
-                    </div>
-                    <div class="is-button">
-                      <input type="submit" value="Ejecutar Pruebas" class="button is-primary">
-                    </div>
-                  </form>
-                </div>
-                <div class="tests-results">
-                  <div class='test-result-container'>
-                    <h1 class="is-subtitle">Titulo de la accion tomada</h1>
-                    <p class="is-description">
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                    </p>
-                  </div>
-                  <div class='test-result-container'>
-                    <h1 class="is-subtitle">Titulo de la accion tomada</h1>
-                    <p class="is-description">
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                    </p>
-                  </div>
-                </div>
-              </div>
-          </div>
         </div>
-      </div>
+      </div> 
       <footer>TC2007 | Métodos Cuantitativos y Simulación | Proyecto 1 | Equipo #3</footer>
     </div>
+    <script src="../models/mclc.js"></script>
     <script src="../viewmodels/mclc_viewmodel.js"></script>
   </body>
 </html>
