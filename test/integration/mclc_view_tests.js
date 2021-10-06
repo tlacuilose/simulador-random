@@ -88,7 +88,7 @@ describe('MCLC View Tests', function () {
     let randomsColumn = 2; // Start on 0.
     let expectedRandoms = ["2", "6", "5", "2", "1"];
     it('displays correct randoms in table', async function () {
-      await visitMCM(this.app.client);
+      await visitMCLC(this.app.client);
       await fillInputForm(this.app.client, 1, 3, 3, 5, 5, 7, 7, 5);
       const formButton = await this.app.client.$('#form-inputs .button');
       await formButton.click();
