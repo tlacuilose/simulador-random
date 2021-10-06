@@ -85,7 +85,7 @@ describe('MCLC View Tests', function () {
     env.openAndCloseApp();
     this.timeout(10000);
 
-    let randomsColumn = 2; // Start on 0.
+    let randomsColumn = 4; // Start on 0.
     let expectedRandoms = ["2", "6", "5", "2", "1"];
     it('displays correct randoms in table', async function () {
       await visitMCLC(this.app.client);
