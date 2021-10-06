@@ -57,8 +57,14 @@
      * */
     this.generate = function(seed1, seed2, a1, a2, m1, m2, m, i) {
       // There cant be a mod 0.
-      if (m1 < 2 || m2 == 0) {
-        return new ResultMCLC([], "ZeroModuleError");
+      if (m1 == 0 || m2 == 0 || m == 0) {
+        return new ResultMCLC([],[],[],"ZeroModuleError");
+      }
+      if (m1<=a1 || m1<=seed1 || m2<=a2 || m2<=seed2){
+        return new ResultMCLC([],[],[], "SmallerModuleError");
+      }
+      if (m1<0 || a1<0 || seed1<0 || i<0 || m2<0 || a2<0 || seed2<0){
+        return new ResultMCLC([],[],[], "NegativeNumberError");
       }
       // Clear saved randoms.
       this._randoms = [];
