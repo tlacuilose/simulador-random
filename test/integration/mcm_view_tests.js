@@ -93,4 +93,30 @@ describe('MCM View Tests', function () {
       expect(results).to.deep.equal(expectedRandoms);
     });
   });
+
+  describe('validates Hull-D class example x0 = 4, a = 5, c = 7, m = 8, i = 5', function () {
+
+    env.openAndCloseApp();
+    this.timeout(10000);
+
+    it('shows the validation results', async function () {
+      await visitMCM(this.app.client);
+      await fillInputForm(this.app.client, 4, 5, 7, 8, 5);
+      const formButton = await this.app.client.$('#form-inputs .button');
+      await formButton.click();
+      const hdResult = await this.app.client.$('#hd-validation-results');
+      const firstSpan = await hdResult.$('#first-hd-rule');
+      const firstTest = await firstSpan.getText();
+      expect(firstTest).to.deep.equal("VERDADERO");
+      const secondSpan = await hdResult.$('#second-hd-rule');
+      const secondText = await secondSpan.getText();
+      expect(secondText).to.deep.equal("VERDADERO");
+      const thirdSpan = await hdResult.$('#third-hd-rule');
+      const thirdText = await thirdSpan.getText();
+      expect(thirdText).to.deep.equal("VERDADERO");
+      const conclusion = await hdResult.$('#hd-conclusion');
+      const conclusionText = await conclusion.getText();
+      expect(conclusionText).to.deep.equal("Por lo tanto el generador congruencial mixto SI tiene periodo completo.");
+    });
+  });
 });

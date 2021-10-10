@@ -94,4 +94,75 @@ describe('MCM Model Unit Tests', () => {
       expect(finalResult.randoms).to.deep.equal(expectedRandoms);
     });
   });
+
+  describe('hull dobell validation of class example', () => {
+    let mcm = new Mcm();
+    let x0 = 4, a = 5, c = 7, m = 8, i = 5;
+    mcm.generate(x0, a, c, m, i);
+    let validationResult = mcm.validateHullDobell();
+
+    it('should expect c and m to be coprime', () => {
+      expect(validationResult.first).to.be.true;
+    });
+
+    it('should expect a≈1modq for q a prime factor of m', () => {
+      expect(validationResult.second).to.be.true;
+    });
+
+    it('should expect that 4 divides m and a ≈ 1mod4', () => {
+      expect(validationResult.third).to.be.true;
+    });
+  });
+
+  describe('hull dobell failed validation of example, x0=37, a=7, c=29, m=100, i=10', () => {
+    let mcm = new Mcm();
+    let x0 = 37, a = 7, c = 29, m = 100, i = 10;
+    mcm.generate(x0, a, c, m, i);
+    let validationResult = mcm.validateHullDobell();
+
+    it('should expect c and m to be coprime', () => {
+      expect(validationResult.first).to.be.true;
+    });
+
+    it('should expect to fail a≈1modq for q a prime factor of m', () => {
+      expect(validationResult.second).to.be.false;
+    });
+
+    it('should expect that 4 divides m and a ≈ 1mod4', () => {
+      expect(validationResult.third).to.be.false;
+    });
+  });
+
+  describe('prime factorization', () => {
+    let mcm = new Mcm();
+    it('should return correct primes', () => {
+      let result = mcm._prime_factors(12);
+      let expected = [2, 3];
+      expect(result).to.deep.equal(expected);
+      result = mcm._prime_factors(84);
+      expected = [2, 3, 7];
+      expect(result).to.deep.equal(expected);
+      result = mcm._prime_factors(65);
+      expected = [5, 13];
+      expect(result).to.deep.equal(expected);
+      result = mcm._prime_factors(31);
+      expected = [31];
+      expect(result).to.deep.equal(expected);
+      result = mcm._prime_factors(5);
+      expected = [5];
+      expect(result).to.deep.equal(expected);
+      result = mcm._prime_factors(32);
+      expected = [2];
+      expect(result).to.deep.equal(expected);
+      result = mcm._prime_factors(21);
+      expected = [3, 7];
+      expect(result).to.deep.equal(expected);
+      result = mcm._prime_factors(9791);
+      expected = [9791];
+      expect(result).to.deep.equal(expected);
+      result = mcm._prime_factors(9792);
+      expected = [2, 3, 17];
+      expect(result).to.deep.equal(expected);
+    });
+  });
 });
