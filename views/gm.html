@@ -25,16 +25,28 @@
           <div class="generator-content">
             <div class="section" id="input-content">
               <div class="section-name">C&aacute;lculo</div>
-              <h1 class="is-title">Método de los Centros Cuadrados</h1>
-              <p class="is-description">Descripcion con el metodo, explicacion, etc.</p>
+              <h1 class="is-title">Método Congruencial Multiplicativo</h1>
+              <p class="is-description">
+              Formula:</br>
+              <strong>X(n+1)=(aX(n))mod(m)</strong>
+              </p>
+              <p id='input-form-error' class='is-error-msg'></p>
               <form class="input-form" id="form-inputs">
-                <div class="is-field">
-                  <label for="seed">Semilla Xo:</label>
-                  <input type="number" name="seed" id="seed-input" required>
+                <div class="is-field-inline">
+                  <label for="x0">Xo:</label>
+                  <input type="number" name="x0" id="x0-input" required>
                 </div>
-                <div class="is-field">
-                  <label for="interations">N&uacute;mero de iteraciones:</label>
-                  <input type="number" name="iterations" id="iterations-input" required>
+                <div class="is-field-inline">
+                  <label for="a">a:</label>
+                  <input type="number" name="a" id="a-input" required>
+                </div>
+                <div class="is-field-inline">
+                  <label for="m">m:</label>
+                  <input type="number" name="m" id="m-input" required>
+                </div>
+                <div class="is-field-inline">
+                  <label for="i">i:</label>
+                  <input type="number" name="i" id="i-input" required>
                 </div>
                 <div class="is-button">
                   <input type="submit" value="Generar" class="button is-primary">
@@ -45,353 +57,20 @@
               <h1 class="section-name">Resultados</h1>
               <div class="table-container is-header">
                 <table>
-                  <tr>
-                    <th>Column</th>
-                    <th>Column</th>
-                    <th>Column</th>
-                    <th>Column</th>
-                    <th>Column</th>
-                  </tr>
+                  <thead>
+                    <tr>
+                      <th>Semilla</th>
+                      <th>Generador</th>
+                      <th>No. Aleatorio</th>
+                      <th>Random Ri</th>
+                    </tr>
+                  </thead>
                 </table>
               </div>
               <div class="table-container">
                 <table>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
-                  <tr>
-                    <th>Xn</th>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                    <td>Val</td>
-                  </tr>
+                  <tbody>
+                  </tbody>
                 </table>
               </div>
             </div>
@@ -523,6 +202,7 @@
       </div>
       <footer>TC2007 | Métodos Cuantitativos y Simulación | Proyecto 1 | Equipo #3</footer>
     </div>
+    <script src="../models/gm.js"></script>
     <script src="../viewmodels/gm_viewmodel.js"></script>
   </body>
 </html>

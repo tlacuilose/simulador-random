@@ -24,6 +24,12 @@ inputForm.addEventListener('submit', (event) => {
     if (result.error == 'ZeroModuleError') {
       showFormError('input-form-error', 'El módulo no puede ser cero.');
     }
+    if (result.error == 'SmallerModuleError') {
+      showFormError('input-form-error', 'Módulo debe ser mayor a "seed" y "a".');
+    }
+    if (result.error == 'NegativeNumberError') {
+        showFormError('input-form-error', 'Números deben ser positivos.');
+    }
     return;
   }
 
