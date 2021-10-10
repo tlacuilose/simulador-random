@@ -1,4 +1,5 @@
 let mcm = new Mcm();
+let chi = new Chisq();
 let x0, a, c, m, i;
 
 const inputForm = document.querySelector('#form-inputs');
@@ -74,7 +75,67 @@ function showHullDobellValidation() {
   <br>
   <span id="hd-conclusion">${conculsion}</span>
   `
-  console.log(results);
+}
+
+const testsForm = document.querySelector('#form-tests');
+testsForm.addEventListener('submit', (event) => {
+  // stop form submission
+  event.preventDefault();
+
+  // Hide error messages.
+  hideFormError('input-form-error')
+
+  const radios = document.querySelectorAll('input[name="radio-alpha"]');
+
+  let alpha = 0;
+  for (const radio of radios) {
+    if (radio.checked) {
+      alpha = radio.value;
+    }
+  }
+
+  let results = validateChiSq(alpha);
+
+  if (results.error == null) {
+    showChiValidation(results);
+  }
+
+});
+
+function validateChiSq(alpha) {
+  // Get Seed and Iterations.
+
+  let ris = mcm.getRis();
+  let result = chi.test(ris, alpha);
+
+  if (result.error != null) {
+    switch (result.error) {
+      case "KOUTOFBOUNDS":
+        showFormError('tests-form-error', 'No hay valores arriba de 250 intervalos para Chi.');
+        break;
+      case "VISZERO":
+        showFormError('tests-form-error', 'No hay intervalos suficientes para evaluar Chi.');
+        break;
+      case "NORANDOMS":
+        showFormError('tests-form-error', 'No hay numeros random que evaluar Chi.');
+        break;
+    }
+    return result;
+  }
+  return result;
+}
+
+function showChiValidation(results) {
+  let complete = results.acceptance;
+  let evalu = (complete) ? 'X0 < XA' : 'XA < X0';
+  let conculsion = `${evalu}, por lo tanto se ${(complete) ? '<span class="is-valid">ACEPTA</span>' : '<span class="is-not-valid">RECHAZA</span>'} h0.`;
+  let testDescription = document.querySelector('#chi-results .is-description');
+  testDescription.innerHTML = `
+  1) <span id="x0-result">${results.x0}</span> = X0<br>
+  2) <span id="xA-result">${results.xA}</span> = XA<br>
+  <br>
+  <span id="chi-conclusion">${conculsion}</span>
+  `
 }
 
 function addCell(text, inRow) {

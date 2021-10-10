@@ -147,6 +147,7 @@
   margin: 0 8px;
   color: var(--primary-color);
   font-size: 0.8em;
+  max-height: 20px;
 }
 
 .is-valid {
