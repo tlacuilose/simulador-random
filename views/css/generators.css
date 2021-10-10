@@ -146,4 +146,13 @@
 .is-error-msg {
   margin: 0 8px;
   color: var(--primary-color);
+  font-size: 0.8em;
+}
+
+.is-valid {
+  color: green;
+}
+
+.is-not-valid {
+  color: var(--primary-color);
 }

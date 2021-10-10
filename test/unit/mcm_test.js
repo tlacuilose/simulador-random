@@ -99,7 +99,7 @@ describe('MCM Model Unit Tests', () => {
     let mcm = new Mcm();
     let x0 = 4, a = 5, c = 7, m = 8, i = 5;
     mcm.generate(x0, a, c, m, i);
-    let validationResult = mcm.hullDobell();
+    let validationResult = mcm.validateHullDobell();
 
     it('should expect c and m to be coprime', () => {
       expect(validationResult.first).to.be.true;
@@ -118,7 +118,7 @@ describe('MCM Model Unit Tests', () => {
     let mcm = new Mcm();
     let x0 = 37, a = 7, c = 29, m = 100, i = 10;
     mcm.generate(x0, a, c, m, i);
-    let validationResult = mcm.hullDobell();
+    let validationResult = mcm.validateHullDobell();
 
     it('should expect c and m to be coprime', () => {
       expect(validationResult.first).to.be.true;

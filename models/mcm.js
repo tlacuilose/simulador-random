@@ -93,7 +93,7 @@ function Mcm() {
    * @memberof Mcm
    * @returns {ResultHullDobell} A set of three booleans representing rules validated.
    * */
-  this.hullDobell = function() {
+  this.validateHullDobell = function() {
 
     // Validate that c and m are coprimers or gcd is 1.
     first = this._gcd_euclidean(this._c, this._m) == 1
