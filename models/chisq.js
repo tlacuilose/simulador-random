@@ -42,7 +42,11 @@ function Chisq() {
     }
 
     // Get xalpha from table.
-    let xA = this._calculateXA();
+    let xAResult = this._calculateXA();
+    if (xAResult.error != null) {
+      return new ResultChisq(0, 0, false, xAResult.error);
+    }
+    let xA = xAResult.xA;
 
     // Check if it acceptance.
     let acceptance = x0 < xA;
@@ -51,7 +55,7 @@ function Chisq() {
   }
 
   // Calculate x0
-  this._calculateX0 = function(Ri_s) {
+  this._calculateX0 = function() {
 
     // Sort the array.
     let Ri_sorted = [...this._Ri_s].sort();
@@ -66,7 +70,9 @@ function Chisq() {
     classes = this._getFrecuencies(Ri_sorted, k, cls_size);
 
     // Fix classes with less than 5 ocurrences.
-    classes = this._fixClassesFrec(classes);
+    let resultFix = this._fixClassesFrec(classes);
+    classes = resultFix.newClasses;
+    this._k = resultFix.k;
 
     // Find Xi for every class.
     let xis = this._calcXi(classes);
@@ -82,8 +88,11 @@ function Chisq() {
   // Calculate xA.
   this._calculateXA = function() {
     let v = this._k - 1;
+    if (v == 0) {
+      return { "xA": 0, "error": "VISZERO"};
+    }
     let xA = CHI_TABLE[v-1][ALPHA_MAP[this._alpha]];
-    return xA;
+    return { "xA": xA, "error": null};
   }
 
   // Calculate class size
@@ -193,6 +202,15 @@ function Chisq() {
       }
     }
 
+    // No new classes where found
+    if (newClasses.length == 0) {
+      newClasses.push({
+        "ini": carried_ini,
+        "fin": carried_fin,
+        "abs_frec": carried_freq
+      });
+    }
+
     // Insert last, join with prior if frequency is less than 5.
     if (carried_freq < 5) {
       carried_ini = newClasses[newClasses.length - 1].ini;
@@ -210,7 +228,7 @@ function Chisq() {
       });
     }
     
-    return newClasses;
+    return { 'k': newClasses.length, 'newClasses': newClasses};
   }
 }
 

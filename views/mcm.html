@@ -90,19 +90,19 @@
                       <div class="is-field-inline">
                         <div class="is-field">
                           <label for="ten-alpha">0.1</label>
-                          <input type="radio" id="ten-alpha" name="ten-alpha" value="0.1">
+                          <input type="radio" id="ten-alpha" name="radio-alpha" value="0.1">
                         </div>
                         <div class="is-field">
                           <label for="five-alpha">0.05</label>
-                          <input type="radio" id="five-alpha" name="five-alpha" value="0.05">
+                          <input type="radio" id="five-alpha" name="radio-alpha" value="0.05">
                         </div>
                         <div class="is-field">
                           <label for="two-alpha">0.02</label>
-                          <input type="radio" id="two-alpha" name="two-alpha" value="0.025">
+                          <input type="radio" id="two-alpha" name="radio-alpha" value="0.025">
                         </div>
                         <div class="is-field">
                           <label for="one-alpha">0.01</label>
-                          <input type="radio" id="one-alpha" name="one-alpha" value="0.01">
+                          <input type="radio" id="one-alpha" name="radio-alpha" value="0.01">
                         </div>
                       </div>
                     </div>
@@ -120,49 +120,19 @@
                   </form>
                 </div>
                 <div class="tests-results">
+                  <p id="tests-form-error" class="is-error-msg"></p>
                   <div class="test-result-container" id="hd-validation-results")>
                     <h1 class="is-subtitle">Validaci&oacute;n Hull-Dobell</h1>
                     <p class="is-description">
                     </p>
                   </div>
                   <div class="test-result-container" id="chi-results">
-                    <h1 class="is-subtitle">Titulo de la accion tomada</h1>
+                    <h1 class="is-subtitle">Prueba de Chi Cuadrada</h1>
                     <p class="is-description">
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
-                      Text of the result from the action taken.
+                    1) <span id="x0-result">1</span> = X0<br>
+                    2) <span id="xA-result">2.488</span> = Xv,alpha<br>
+                    <br>
+                    Por lo tanto se <span id="chi-conclusion" class="is-valid">ACCEPTA</span> h0
                     </p>
                   </div>
                 </div>
@@ -173,6 +143,7 @@
       <footer>TC2007 | Métodos Cuantitativos y Simulación | Proyecto 1 | Equipo #3</footer>
     </div>
     <script src="../models/mcm.js"></script>
+    <script src="../models/chisq.js"></script>
     <script src="../viewmodels/mcm_viewmodel.js"></script>
   </body>
 </html>
