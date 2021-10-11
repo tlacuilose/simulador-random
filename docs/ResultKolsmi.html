@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: ResultGM</title>
+    <title>JSDoc: Class: ResultKolsmi</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Class: ResultGM</h1>
+    <h1 class="page-title">Class: ResultKolsmi</h1>
 
     
 
@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>ResultGM<span class="signature">(randoms, error)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>ResultKolsmi<span class="signature">(dp, dm, dr, dr, acceptance)</span><span class="type-signature"></span></h2>
         
     
 </header>
@@ -41,7 +41,7 @@
     
 
     
-    <h4 class="name" id="ResultGM"><span class="type-signature"></span>new ResultGM<span class="signature">(randoms, error)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="ResultKolsmi"><span class="type-signature"></span>new ResultKolsmi<span class="signature">(dp, dm, dr, dr, acceptance)</span><span class="type-signature"></span></h4>
     
 
     
@@ -49,7 +49,7 @@
 
 
 <div class="description">
-    Result from a GM generator.
+    Result from a Kolmogorov-Smirnov test
 </div>
 
 
@@ -85,13 +85,13 @@
 
         <tr>
             
-                <td class="name"><code>randoms</code></td>
+                <td class="name"><code>dp</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;Number></span>
+<span class="param-type">Number</span>
 
 
             
@@ -101,20 +101,20 @@
 
             
 
-            <td class="description last">The random numbers generated.</td>
+            <td class="description last">D+ result</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>error</code></td>
+                <td class="name"><code>dm</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Number</span>
 
 
             
@@ -124,7 +124,76 @@
 
             
 
-            <td class="description last">Error description or null if no errors found.</td>
+            <td class="description last">D- result</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">D result</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DA result</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>acceptance</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Calculated acceptance</td>
         </tr>
 
     
@@ -162,13 +231,13 @@
 
         <tr>
             
-                <td class="name"><code>randoms</code></td>
+                <td class="name"><code>dp</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;Number></span>
+<span class="param-type">Number</span>
 
 
             
@@ -178,20 +247,20 @@
 
             
 
-            <td class="description last">The random numbers generated.</td>
+            <td class="description last">D+ result</td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>error</code></td>
+                <td class="name"><code>dm</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">String</span>
+<span class="param-type">Number</span>
 
 
             
@@ -201,7 +270,76 @@
 
             
 
-            <td class="description last">Error description or null if no errors found.</td>
+            <td class="description last">D- result</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">D result</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>dr</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">DA result</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>acceptance</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Number</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Calculated acceptance</td>
         </tr>
 
     
@@ -240,7 +378,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="gm.js.html">gm.js</a>, <a href="gm.js.html#line1">line 1</a>
+        <a href="kolsmi.js.html">kolsmi.js</a>, <a href="kolsmi.js.html#line1">line 1</a>
     </li></ul></dd>
     
 

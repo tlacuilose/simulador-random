@@ -3,7 +3,11 @@
  * @class ResultChisq
  * @type {Object}
  * @property {Number} x0 Calculated x0
+ * @property {Number} xA Calculated xA
+ * @property {Number} acceptance Calculated acceptance
  * @param {Number} x0 Calculated x0
+ * @param {Number} xA Calculated xA
+ * @param {Number} acceptance Calculated acceptance
  * */
 function ResultChisq(x0, xA, acceptance, error) {
   this.x0 = x0;

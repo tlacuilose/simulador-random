@@ -121,14 +121,18 @@
                 </div>
                 <div class="tests-results">
                   <p id="tests-form-error" class="is-error-msg"></p>
-                  <div class="test-result-container" id="chi-results">
-                    <h1 class="is-subtitle">Prueba de Chi Cuadrada</h1>
-                    <p class="is-description"></p>
-                  </div>
                   <div class="test-result-container" id="hd-validation-results")>
                     <h1 class="is-subtitle">Validaci&oacute;n Hull-Dobell</h1>
                     <p class="is-description">
                     </p>
+                  </div>
+                  <div class="test-result-container" id="chi-results">
+                    <h1 class="is-subtitle">Prueba de Chi Cuadrada</h1>
+                    <p class="is-description"></p>
+                  </div>
+                  <div class="test-result-container" id="kol-results">
+                    <h1 class="is-subtitle">Prueba de Kolmogorov-Smirnov</h1>
+                    <p class="is-description"></p>
                   </div>
                 </div>
               </div>
@@ -139,6 +143,7 @@
     </div>
     <script src="../models/mcm.js"></script>
     <script src="../models/chisq.js"></script>
+    <script src="../models/kolsmi.js"></script>
     <script src="../viewmodels/mcm_viewmodel.js"></script>
   </body>
 </html>

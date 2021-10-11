@@ -1,5 +1,6 @@
 let gm = new Gm();
 let chi = new Chisq();
+let kol = new Kolsmi();
 
 const inputForm = document.querySelector('#form-inputs');
 inputForm.addEventListener('submit', (event) => {
@@ -73,10 +74,23 @@ testsForm.addEventListener('submit', (event) => {
     }
   }
 
-  let results = validateChiSq(alpha);
+  const checkchi = document.querySelector('#chi-sq-input').checked;
+  const checkkol = document.querySelector('#kol-smi-input').checked;
 
-  if (results.error == null) {
-    showChiValidation(results);
+  if (checkchi) {
+    let results = validateChiSq(alpha);
+
+    if (results.error == null) {
+      showChiValidation(results);
+    }
+  }
+
+  if (checkkol) {
+    let results = validateKol(alpha);
+
+    if (results.error == null) {
+      showKolValidation(results);
+    }
   }
 
 });
@@ -114,6 +128,38 @@ function showChiValidation(results) {
   2) <span id="xA-result">${results.xA}</span> = XA<br>
   <br>
   <span id="chi-conclusion">${conculsion}</span>
+  `
+}
+
+function validateKol(alpha) {
+  // Get Seed and Iterations.
+
+  let ris = gm.getRis();
+  let result = kol.test(ris, alpha);
+
+  if (result.error != null) {
+    switch (result.error) {
+      case "NORANDOMS":
+        showFormError('tests-form-error', 'No hay numeros random que evaluar Chi.');
+        break;
+    }
+    return result;
+  }
+  return result;
+}
+
+function showKolValidation(results) {
+  let complete = results.acceptance;
+  let evalu = (complete) ? 'D < Dalpha' : 'Dalpha < D';
+  let conculsion = `${evalu}, por lo tanto se ${(complete) ? '<span class="is-valid">ACEPTA</span>' : '<span class="is-not-valid">RECHAZA</span>'} h0.`;
+  let testDescription = document.querySelector('#kol-results .is-description');
+  testDescription.innerHTML = `
+  1) <span id="dp-result">${results.dp}</span> = D+<br>
+  2) <span id="dm-result">${results.dm}</span> = D-<br>
+  3) <span id="dr-result">${results.dr}</span> = D<br>
+  4) <span id="da-result">${results.da}</span> = DAlpha<br>
+  <br>
+  <span id="kol-conclusion">${conculsion}</span>
   `
 }
 
