@@ -75,7 +75,7 @@ describe('MCC Model Unit Tests', () => {
   describe('class example x0=3547, i=5', () => {
     let mcc = new Mcc();
     let x0 = 3547, i = 5;
-    let expectedRandoms = [5812, 7793, 7308, 34068, 5486];
+    let expectedRandoms = [5812, 7793, 7308, 4068, 5486];
     let finalResult = mcc.generate(x0, i);
 
     it('should return a null error', () => {
