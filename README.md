@@ -14,6 +14,8 @@ las pruebas de Chi-Cuadrada y Kolmogorov-Smirnov.*
 ## To Use
 
 ```bash
+# Clone repository 
+git clone https://github.com/tlacuilose/simulador-random.git 
 # Go into the repository
 cd simulador-random
 # Install dependencies
